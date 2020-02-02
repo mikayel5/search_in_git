@@ -18,7 +18,7 @@ function App() {
           <Route path='/about'>
             <About />
           </Route>
-          <Route path='/profile:name'>
+          <Route path='/profile/:name'>
             <Profile />
           </Route>
         </Switch>
