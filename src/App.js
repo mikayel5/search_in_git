@@ -6,7 +6,7 @@ import About from './pages/About';
 import Profile from './pages/Profile';
 import Alert from './components/Alert';
 import AlertState from './context/alert/AlertState'
-import { GithubState } from './context/github/GithubState';
+import GithubState from './context/github/GithubState';
 
 function App() {
   return (
@@ -31,6 +31,9 @@ function App() {
         </BrowserRouter>
       </AlertState>
     </GithubState>
+
+
+
   );
 }
 
