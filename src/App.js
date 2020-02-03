@@ -6,28 +6,31 @@ import About from './pages/About';
 import Profile from './pages/Profile';
 import Alert from './components/Alert';
 import AlertState from './context/alert/AlertState'
+import { GithubState } from './context/github/GithubState';
 
 function App() {
   return (
-    <AlertState>
-      <BrowserRouter>
-        <Navbar />
-        <div className='container pt-4'>
-          <Alert alert={{ text: 'Test Alert' }} />
-          <Switch>
-            <Route path='/' exact>
-              <Home />
-            </Route>
-            <Route path='/about'>
-              <About />
-            </Route>
-            <Route path='/profile/:name'>
-              <Profile />
-            </Route>
-          </Switch>
-        </div>
-      </BrowserRouter>
-    </AlertState>
+    <GithubState>
+      <AlertState>
+        <BrowserRouter>
+          <Navbar />
+          <div className='container pt-4'>
+            <Alert alert={{ text: 'Test Alert' }} />
+            <Switch>
+              <Route path='/' exact>
+                <Home />
+              </Route>
+              <Route path='/about'>
+                <About />
+              </Route>
+              <Route path='/profile/:name'>
+                <Profile />
+              </Route>
+            </Switch>
+          </div>
+        </BrowserRouter>
+      </AlertState>
+    </GithubState>
   );
 }
 
